@@ -19,6 +19,6 @@ with smtplib.SMTP("smtp.gmail.com", port=587) as connection:#careful about this 
             now.strftime("%A").lower() == "friday":
         connection.sendmail(
             from_addr=MY_EMAIL,
-            to_addrs="idrisbahce26@gmail.com",
+            to_addrs="**********@****.com",             #This is the email which to be send
             msg=f"Subject:MOTIVATION!\n\n{random.choice(lines)}"
         )
