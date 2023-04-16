@@ -12,8 +12,8 @@ MY_PASSWORD = "***************"#Write here the password of your email.
 with open("quotes.txt", "r") as quotes:
     lines = quotes.readlines()
 
-with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
-    connection.starttls()
+with smtplib.SMTP("smtp.gmail.com", port=587) as connection:#careful about this line and change SMTP accordingly with
+    connection.starttls()                                    #your email type
     connection.login(user=MY_EMAIL, password=MY_PASSWORD)
     if now.strftime("%A").lower() == "sunday" or now.strftime("%A").lower() == "tuesday" or\
             now.strftime("%A").lower() == "friday":
